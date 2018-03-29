@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif:300,400|Playfair+Display|Roboto:500,700");
+@import url(../CSS/_reset.css);
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "IBM Plex Serif";
+  font-size: 18px;
+  font-weight: 400; }
+
+.ab-header {
+  height: 100vh;
+  position: relative;
+  background-image: url("../images/header-banner.jpg");
+  background-size: cover; }
+
+.navigation-bar {
+  height: 65px;
+  padding: 0 50px;
+  line-height: 65px;
+  background-color: #121113;
+  color: #F7F7F2;
+  opacity: 0.8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .navigation-bar .nav-brand {
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 500;
+    float: left;
+    cursor: pointer; }
+  .navigation-bar .nav-main {
+    float: right;
+    list-style: none;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 500; }
+    .navigation-bar .nav-main li {
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      transition: all 300ms ease-out; }
+      .navigation-bar .nav-main li a {
+        text-decoration: none;
+        color: #F7F7F2; }
+      .navigation-bar .nav-main li:hover {
+        background-color: #F7F7F2; }
+        .navigation-bar .nav-main li:hover a {
+          color: #121113; }
+
+.title {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  height: 300px; }
+  .title h1 {
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-size: 4em;
+    font-weight: 700;
+    color: #F7F7F2;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+  .title .cta-btn {
+    position: absolute;
+    bottom: 20px;
+    padding: 5px 20px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 700;
+    color: #121113;
+    background-color: #F7F7F2;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 300ms ease-out; }
+    .title .cta-btn:hover {
+      background-color: #121113;
+      color: #F7F7F2;
+      border: 1px solid #F7F7F2; }
+
+.hm-story {
+  padding: 40px;
+  display: flex;
+  justify-content: space-around; }
+  .hm-story .content {
+    flex-basis: 50%;
+    text-align: center;
+    padding-top: 100px; }
+    .hm-story .content h1 {
+      display: inline-block;
+      padding: 7px 10px;
+      margin-bottom: 30px;
+      font-family: "Roboto";
+      font-size: 2.5em;
+      font-weight: 700;
+      border: 8px solid #121113;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition: all 400ms ease-out; }
+    .hm-story .content p {
+      line-height: 1.4;
+      font-family: "IBM Plex Serif";
+      font-size: 19px;
+      font-weight: 400;
+      color: #121113; }
+  .hm-story .images {
+    flex-basis: 50%;
+    max-height: 500px;
+    max-width: 500px;
+    display: flex;
+    flex-flow: row wrap; }
+    .hm-story .images div {
+      position: relative;
+      flex-basis: 50%;
+      max-width: 220px;
+      max-height: 220px;
+      margin: 10px; }
+      .hm-story .images div img {
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+      .hm-story .images div .cover {
+        display: none;
+        position: absolute;
+        top: -10px;
+        left: -11px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); }
+        .hm-story .images div .cover .content {
+          position: absolute;
+          bottom: -100px;
+          padding: 20px 5px;
+          overflow: hidden;
+          text-align: left;
+          color: #F7F7F2;
+          transition: all 400ms ease-out; }
+          .hm-story .images div .cover .content h3 {
+            padding: 5px 0;
+            text-transform: uppercase;
+            font-family: "Roboto";
+            font-size: 17px;
+            font-weight: 500; }
+          .hm-story .images div .cover .content h4 {
+            font-family: "IBM Plex Serif";
+            font-size: 15px;
+            font-weight: 300; }
+
+.hm-coffee-banner {
+  position: relative;
+  height: 80vh;
+  background-image: url("../images/coffee-banner.jpg");
+  background-size: cover;
+  background-position: center; }
+  .hm-coffee-banner h1 {
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto";
+    font-size: 5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F7F7F2;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+
+.hm-coffee {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px; }
+  .hm-coffee .content {
+    flex-basis: 60%;
+    text-align: center;
+    padding-top: 100px; }
+    .hm-coffee .content h1 {
+      display: inline-block;
+      padding: 7px 10px;
+      margin-bottom: 30px;
+      font-family: "Roboto";
+      font-size: 2.5em;
+      font-weight: 700;
+      border: 8px solid #121113;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .hm-coffee .content p {
+      line-height: 1.4;
+      font-family: "IBM Plex Serif";
+      font-size: 19px;
+      font-weight: 400;
+      color: #121113; }
+  .hm-coffee .image-wrapper {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative; }
+    .hm-coffee .image-wrapper .cover {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      padding: 30px;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6); }
+      .hm-coffee .image-wrapper .cover .text {
+        position: absolute;
+        bottom: -130px;
+        left: 20px;
+        color: #F7F7F2;
+        transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .hm-coffee .image-wrapper .cover .text h3 {
+          font-family: "Roboto";
+          font-size: 20px;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin-bottom: 10px; }
+        .hm-coffee .image-wrapper .cover .text h4 {
+          font-family: "IBM Plex Serif";
+          font-size: 18px;
+          font-weight: 300; }
+
+.hm-bread-banner {
+  position: relative;
+  height: 80vh;
+  background-image: url("../images/bread.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  .hm-bread-banner h1 {
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto";
+    font-size: 5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F7F7F2;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+
+.hm-bread {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between; }
+  .hm-bread .content {
+    margin-right: 30px;
+    text-align: center;
+    padding-top: 120px; }
+    .hm-bread .content h1 {
+      display: inline-block;
+      padding: 7px 10px;
+      margin-bottom: 30px;
+      font-family: "Roboto";
+      font-size: 2.5em;
+      font-weight: 700;
+      border: 8px solid #121113;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .hm-bread .content p {
+      line-height: 1.4;
+      font-family: "IBM Plex Serif";
+      font-size: 19px;
+      font-weight: 400;
+      color: #121113; }
+  .hm-bread .images {
+    display: flex; }
+    .hm-bread .images .image-wrapper {
+      flex: 0.5;
+      margin: 10px;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+      .hm-bread .images .image-wrapper .cover {
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); }
+        .hm-bread .images .image-wrapper .cover .text {
+          position: absolute;
+          bottom: 30px;
+          padding: 0 20px;
+          color: #F7F7F2;
+          transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+          .hm-bread .images .image-wrapper .cover .text h3 {
+            font-family: "Roboto";
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 10px; }
+          .hm-bread .images .image-wrapper .cover .text h4 {
+            font-family: "IBM Plex Serif";
+            font-size: 20px;
+            font-weight: 300; }
+
+footer {
+  position: relative;
+  padding: 55px 0;
+  font-family: "Roboto";
+  font-size: 1.4em;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: #F7F7F2;
+  background-color: #121113; }
+  footer h2 {
+    font-family: "Roboto";
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #1A9B50; }
+  footer h3 {
+    margin-top: 15px; }
+  footer .adress {
+    margin-bottom: 0px; }
+  footer .connect, footer .call {
+    margin: 40px 50px;
+    display: inline-block; }
+    footer .connect span, footer .call span {
+      margin: 0 10px; }
+  footer .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    font-family: "IBM Plex Serif";
+    font-size: 15px;
+    font-weight: 300;
+    background-color: #1c1a1d; }
+    footer .bottom a {
+      text-decoration: none;
+      color: #1A9B50; }
+
+/*********************************************
+
+------>   About us page
+
+******************************/
+.ab-name {
+  height: 320px;
+  width: 100%;
+  background-image: url("../images/about/intro.jpg");
+  background-size: cover; }
+  .ab-name h1 {
+    float: right;
+    padding: 80px;
+    font-family: "Roboto";
+    font-size: 5em;
+    font-weight: 700;
+    color: #F7F7F2;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+
+.ab-intro {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 50px 0;
+  background-color: #E8FEFF; }
+  .ab-intro img {
+    flex-basis: 40%;
+    max-height: 100%;
+    max-width: 100%;
+    transform: scale(0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .ab-intro .content {
+    flex-basis: 45%;
+    padding: 100px 0; }
+    .ab-intro .content h1 {
+      font-family: "Roboto";
+      font-size: 2em;
+      font-weight: 500;
+      margin-bottom: 40px; }
+    .ab-intro .content p {
+      font-family: "IBM Plex Serif";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.4; }
+    .ab-intro .content a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 40px;
+      border: 2px solid #121113;
+      font-family: "Roboto";
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #121113;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition: all 400ms ease-out; }
+      .ab-intro .content a:hover {
+        box-shadow: none; }
+
+.ab-team {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 50px;
+  background-color: #E8FEFF; }
+  .ab-team .images {
+    flex-basis: 50%; }
+    .ab-team .images img {
+      max-height: 100%;
+      max-width: 100%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .ab-team .content {
+    flex-basis: 40%;
+    padding: 60px 20px; }
+    .ab-team .content h1 {
+      font-family: "Roboto";
+      font-size: 2em;
+      font-weight: 500;
+      margin-bottom: 30px; }
+    .ab-team .content p {
+      line-height: 1.4; }
+    .ab-team .content * {
+      margin: 20px 0; }
+
+/*********************************************
+
+------>   Contact us page
+
+******************************/
+.ct-header {
+  position: relative;
+  text-align: center; }
+  .ct-header #myVideo {
+    margin-top: -130px;
+    max-width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .ct-header .title {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%); }
+    .ct-header .title h1 {
+      font-family: "Roboto";
+      font-size: 3.5em;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #F7F7F2; }
+    .ct-header .title h5 {
+      font-family: "Roboto";
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #F7F7F2; }
+
+.ct-info {
+  margin: 50px 20%;
+  text-align: center; }
+  .ct-info * {
+    margin: 20px 0;
+    line-height: 1.4; }
+  .ct-info h1 {
+    font-family: "Roboto";
+    font-size: 2em;
+    font-weight: 500;
+    text-transform: uppercase; }
+
+.ct-form {
+  padding: 50px; }
+  .ct-form form {
+    width: 70%;
+    margin: 0 auto; }
+    .ct-form form input {
+      width: 100%;
+      height: 45px;
+      border: 0;
+      margin: 5px 0;
+      text-indent: 15px;
+      background-color: rgba(144, 238, 144, 0.5);
+      font-family: "IBM Plex Serif";
+      font-size: 16px;
+      font-weight: 400;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+      .ct-form form input::placeholder {
+        color: grey;
+        font-family: "IBM Plex Serif";
+        font-size: 16px;
+        font-weight: 400; }
+      .ct-form form input:focus {
+        outline: 0;
+        border-bottom: 2px solid #1A9B50; }
+    .ct-form form textarea {
+      width: 100%;
+      height: 150px;
+      border: 0;
+      margin-top: 5px;
+      padding-top: 10px;
+      text-indent: 15px;
+      background-color: rgba(144, 238, 144, 0.5);
+      font-family: "IBM Plex Serif";
+      font-size: 16px;
+      font-weight: 400;
+      resize: none;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+      .ct-form form textarea:focus {
+        outline: none;
+        border-bottom: 2px solid #1A9B50; }
+    .ct-form form #submitBtn {
+      display: block;
+      width: 120px;
+      height: 40px;
+      margin: 10px auto;
+      border: 0;
+      font-family: "Roboto";
+      font-size: 16px;
+      font-weight: 500;
+      background-color: rgba(144, 238, 144, 0.5);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+/*# sourceMappingURL=style.css.map */
